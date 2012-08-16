@@ -1,0 +1,555 @@
+/* =============================================================================
+   CSS for Jenny and Josh's Wedding Site, by Evan Huntley
+   ========================================================================== */
+
+/* =============================================================================
+   Eric Meyer's CSS Reset
+   =============================================================*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.group:after { 	content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0; 
+				}
+.group { *zoom: 1; display: inline-block;}
+
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('../fonts/modernpics-webfont.eot');
+    src: url('../fonts/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/modernpics-webfont.woff') format('woff'),
+         url('../fonts/modernpics-webfont.ttf') format('truetype'),
+         url('../fonts/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ===== Primary Styles ========================================================
+   Author: Evan Huntley
+   ========================================================================== */
+html {
+	-webkit-text-size-adjust: none;	
+}
+
+body {
+	font: 16px/24px "proxima-nova", sans-serif;
+	background: url(../img/stripes.jpg) fixed;
+}
+
+.wrap {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+img {
+	width: 100%;
+
+}
+
+h1 {
+	font: 2.5em/1em "bistro-script-web", sans-serif;
+	margin: .2em 0 .5em 0;
+	text-align: center;
+}
+
+h2 {
+	font-family: "bistro-script-web", cursive;
+	font-size: 3em;
+	margin: .7em 0 .7em .3em;
+	text-align: center;
+}
+
+h2::after {
+	content: "p";
+	font-family: "ModernPictogramsNormal";
+	position: relative;
+	left: -.3em;
+	font-size: 1.8em;
+	top: .07em;
+	color: rgba(168, 168, 166, .22);
+}
+
+.ceremony h2::after {
+	content: "j";
+}
+
+.reception h2::after {
+	content: "C"
+}
+
+.registry h2::after {
+	content: "J";
+}
+
+.rsvp h2::after {
+	content: "m";
+}
+
+h3 {
+	font: 1.875em/1.2em "myriad-pro-condensed", sans-serif;
+	margin: .375em 0;
+}
+
+h4 {
+	position: absolute;
+	display: block;
+	top: 5.5em;
+	left: -.7em;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	line-height: 80px;
+	text-align: center;
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	font-family: "bistro-script-web";
+	font-size: 1.4em;
+	box-shadow: 1px 1px 5px rgba(1, 1, 1, 0.3);
+	border: 3px dotted rgba(0,0,0,0.15);
+}
+
+p, ol {
+	font-size: .9em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+ol {
+	list-style-type: decimal;
+	margin-left: 30px;
+}
+
+.logo {
+	position: absolute;	
+	text-decoration: none;
+	color: #000;
+	font-family: "bistro-script-web";
+	font-size: 4em;
+	width: 220px;
+	left: 20px;
+}
+
+header {
+	width: 100%;
+	position: relative;	
+	height: 100px;
+	padding: 12px 1%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background: rgb(255,255,136); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,136,1) 0%, rgba(237,197,54,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,136,1)), color-stop(100%,rgba(237,197,54,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* W3C */
+	border-bottom: 3px dotted rgba(0,0,0,0.05);
+}
+
+
+nav {
+	width: 100%;
+	min-height: 5em;
+}
+
+nav li {
+	border-bottom: 1px solid rgba(1, 1, 1, .1);
+		background: rgb(255,255,136); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,136,1) 0%, rgba(237,197,54,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,136,1)), color-stop(100%,rgba(237,197,54,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,136,1) 0%,rgba(237,197,54,1) 100%); /* W3C */
+}
+
+nav li a {
+	text-decoration: none;
+	color: #000;
+	font-family: "bistro-script-web", cursive;
+	font-size: 1.6em;
+	text-shadow: 0px 0px 3px rgba(1, 1, 1, 0.2);
+	display: block;
+	padding: .6em;
+}
+
+nav .nav-left, nav .nav-right {
+	text-align: center;
+}
+
+.menu-link a {
+	font-family: "bistro-script-web", sans-serif;
+	text-decoration: none;
+	color: black;
+	font-size: 1.7em;
+	position: absolute;
+	right: .3em;
+	top: 1.1em;
+	border-radius: 5px;
+	padding: .28em;
+	text-shadow: 0px 0px 3px rgba(1, 1, 1, 0.2);
+	-webkit-transition: all .05s ease-in;
+	box-shadow: inset 0px 0px 12px rgba(1, 1, 1, 0.15);
+}
+
+.menu-link a:hover {
+	background: rgba(1, 1, 1, 0.5);
+	color: #eee;
+}
+
+.main-content {
+	background: rgba(255, 255, 255, .7);
+	padding: 1.8% 5%;
+	border-radius: 5px;
+}
+
+section {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: .7em 0;
+	border-top: 2px dotted #ddd;
+}
+
+section a {
+	color: rgba(86,27,140, 0.7);
+}
+
+section a:hover {
+	color: rgba(86,27,140, 1);
+}
+
+section img {
+	border: 3px solid rgba(252,242,105,0.66);
+	box-shadow: 0px 0px 2px rgba(1, 1, 1, .2);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.welcome {
+	margin-top: 0;
+	border: none;
+}
+
+.reception, .ceremony {
+	position: relative;
+}
+
+.directions {
+	width: 100%;
+}
+
+.directions img {
+	margin: 20px 0 10px 0;
+}
+
+.directions .map-links a {
+	text-decoration: none;
+	font-size: 1.1em;
+}
+
+.directions .map-links a span {
+	font-family: "ModernPictogramsNormal";
+	font-size: 1.2em;
+}
+
+.details section h2 {
+	text-align: center;
+}
+
+footer {
+	clear: both;
+}
+
+footer p {
+	text-align: center;
+	margin-top: .6em;
+	font-size: .8em;
+	line-height: 1.5em;
+}
+
+footer p span {
+	font-family: "ModernPictogramsNormal";
+	font-size: 1.1em;
+}
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 34.0625em) /* 505 px */ {
+
+.wrap {
+	width: 93.75%;
+}
+
+.menu-link {
+	text-indent: -9999px;
+}
+
+.menu-link a {
+	display: none;
+}
+
+.logo {
+	left: 50%;
+	margin-left: -110px;
+}
+
+header {
+	height: 136px;
+}
+
+nav {
+	position: absolute;
+	top: 5.25em;
+	width: 91%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: 1em;
+}
+
+nav li {
+	display: inline-block;
+	background: transparent;
+	border: none;
+}
+
+nav li a {
+	display: inline;
+	padding: 0;
+}
+
+nav .nav-right {
+	float: left;
+	text-align: right;
+	width: auto;
+}
+
+nav .nav-left {
+	float: left;
+	text-align: left;
+	width: auto;
+}
+
+.nav-right li a {
+	margin-left: .5em;
+}
+
+.nav-left li a {
+	margin-right: .5em;
+}
+
+.details section:last-child {
+	padding-right: 0;
+}
+
+.details section:first-child {
+	padding-left: 0;
+	border: none;
+}
+
+
+footer p {
+	font-size: 1em;
+	width: 33.333333333%;
+	float: left;
+}
+
+footer .author {
+	text-align: right;
+}
+
+footer .wed-location {
+	text-align: left;
+}
+
+}
+
+
+@media only screen and (min-width: 540px) {
+	
+}
+
+
+@media only screen and (min-width: 48em) /* 768 px */ {
+
+h1 {
+	float: right;
+	display: block;
+	width: 37%;
+}
+
+header {
+	height: 100px;
+}
+
+nav {
+	top: 1.4em;
+	width: 100%;
+	margin-left: 0;
+	left: 0;
+}
+
+nav .nav-right {
+	float: right;
+	margin-right: 3%;
+}
+
+nav .nav-left {
+	margin-left: 3%;
+}
+
+.welcome .banner {
+	float: left;
+	width: 59%;
+}
+
+.rsvp, .lodging, .registry {
+	width: 33.33333333%;
+	float: left;
+	padding-right: 1%;
+	border-left: 1px solid rgba(217,215,215,0.81);
+	padding-left: 1%;
+}
+
+.welcome .message {
+	float: right;
+	width: 37%;
+}
+
+.ceremony {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+}
+
+.reception {
+	width: 48%;
+	float: right;
+	margin-left: 2%;
+}
+
+.details {
+	border-top: 2px dotted #DDD;
+}
+
+
+.registry, .rsvp {
+	border-top: none;
+}
+
+.directions .instructions {
+	float: left;
+	width: 37%;
+}
+
+.directions .google-maps {
+	float: right;
+	width: 59%;
+	margin-top: 2em;
+}
+
+
+
+footer {
+	width: 93.75%;
+	margin: 0 auto;
+}
+
+}
+
+@media only screen and (min-width: 56.25em)/* 900 px */ {
+
+.nav-right li a {
+	margin-left: 1.2em;
+}
+
+.nav-left li a {
+	margin-right: 1.2em;
+}
+
+}
+
+
+@media only screen and (min-width: 62.5em) /* 1000 px */ {
+
+.nav-right li a {
+	margin-left: 1.6em;
+}
+
+.nav-left li a {
+	margin-right: 1.6em;
+}
+
+}
+
+@media only screen and (min-width: 75em) /* 1200 px */ {
+
+.nav-right li a {
+	margin-left: 2em;
+}
+
+.nav-left li a {
+	margin-right: 2em;
+}
+	
+}
+
+
