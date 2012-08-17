@@ -95,6 +95,24 @@ img {
 
 }
 
+.google-button, .ical-button {
+	width: auto;
+	border: none;
+	box-shadow: none;
+	padding: 0 8px;
+}
+
+.message .cal-info {
+	text-align: center;
+	background: rgba(0, 0, 0, .05);
+	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, .2);
+	border-radius: 10px;
+	width: 80%;
+	margin: 30px auto;
+	padding: 3px 0;
+	
+}
+
 h1 {
 	font: 2.5em/1em "bistro-script-web", sans-serif;
 	margin: .2em 0 .5em 0;
@@ -137,6 +155,10 @@ h2::after {
 h3 {
 	font: 1.875em/1.2em "myriad-pro-condensed", sans-serif;
 	margin: .375em 0;
+}
+
+.message .cal-info h3 {
+	font-family: "bistro-script-web", sans-serif;
 }
 
 h4 {
@@ -310,6 +332,7 @@ section img {
 
 footer {
 	clear: both;
+	max-width: 1200px;
 }
 
 footer p {
